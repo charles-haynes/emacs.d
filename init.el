@@ -1,3 +1,6 @@
+;;; package --- init
+;;; Commentary:
+;;; Code:
 (setq load-path
       (cons (expand-file-name "~/.emacs.d/") load-path))
 
@@ -9,3 +12,4 @@
 (require 'emacs-custom)
 (require 'emacs-functions)
 (require 'emacs-keybindings)
+;;; init ends here

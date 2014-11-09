@@ -1,5 +1,8 @@
+;;; package --- emacs-functions
+;;; Commentary:
+;;; Code:
+
 ;;; fancy go to beginning of line
-;;;###autoload
 (defun smart-beginning-of-line ()
   "Move point to first non-whitespace character or beginning-of-line.
 
@@ -11,4 +14,11 @@ If point was already at that position, move point to beginning of line."
     (and (= oldpos (point))
          (beginning-of-line))))
 
+;; UI tweaks
+(setq ring-bell-function `(lambda ()
+                            (set-face-background 'default "black")
+                            (set-face-background 'default "white")))
+
 (provide 'emacs-functions)
+
+;;; emacs-functions ends here
