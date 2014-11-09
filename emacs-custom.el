@@ -7,6 +7,7 @@
  '(ediff-split-window-function (quote split-window-horizontally))
  '(electric-pair-mode t)
  '(global-ede-mode t)
+ '(global-flycheck-mode t nil (flycheck))
  '(global-linum-mode t)
  '(global-whitespace-mode t)
  '(ido-use-virtual-buffers (quote auto))
