@@ -28,6 +28,7 @@
 (depends-on "prodigy")
 (depends-on "projectile")
 (depends-on "s")
+(depends-on "semantic/sb")
 (depends-on "smartparens")
 (depends-on "smex")
 (depends-on "use-package")

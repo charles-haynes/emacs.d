@@ -6,11 +6,13 @@
  '(ediff-merge-split-window-function (quote split-window-vertically))
  '(ediff-split-window-function (quote split-window-horizontally))
  '(electric-pair-mode t)
+ '(global-ede-mode t)
  '(global-linum-mode t)
  '(ido-use-virtual-buffers (quote auto))
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
  '(line-number-mode t)
+ '(semantic-mode t)
  '(server-done-hook (quote ((lambda nil (delete-frame)))))
  '(server-switch-hook
    (quote
