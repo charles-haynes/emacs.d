@@ -12,4 +12,8 @@
 (require 'emacs-custom)
 (require 'emacs-functions)
 (require 'emacs-keybindings)
+
+(put 'narrow-to-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
+(server-start)
 ;;; init ends here
