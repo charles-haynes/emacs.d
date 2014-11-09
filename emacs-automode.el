@@ -18,6 +18,7 @@
 (auto-mode "\\.gemspec$" 'ruby-mode)
 (auto-mode "\\.html?$" 'html-mode)
 (auto-mode "\\.js$" 'js2-mode)
+(auto-mode "\\.json$" 'json-mode)
 (auto-mode "\\.markdown$" 'markdown-mode)
 (auto-mode "\\.md$" 'markdown-mode)
 (auto-mode "\\.org$" 'org-mode)

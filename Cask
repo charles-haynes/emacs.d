@@ -2,6 +2,8 @@
 (source marmalade)
 (source melpa)
 
+; cannot load sql-mode, semantic/sb, org-mode, html-mode, CEDET
+
 (depends-on "better-defaults")
 (depends-on "bind-key")
 (depends-on "cask")
@@ -42,6 +44,7 @@
 (depends-on "smex")
 (depends-on "sql-mode")
 (depends-on "use-package")
+(depends-on "web-beautify")
 (depends-on "web-mode")
 (depends-on "whitespace")
 (depends-on "yaml-mode")

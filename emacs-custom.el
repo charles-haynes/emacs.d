@@ -34,4 +34,5 @@
  ;; If there is more than one, they won't work right.
  '(whitespace-hspace ((t (:background "black" :foreground "brightblack"))))
  '(whitespace-newline ((t (:foreground "#222222" :weight normal))))
- '(whitespace-space ((t (:background "black" :foreground "#222222")))))
+ '(whitespace-space ((t (:background "black" :foreground "#222222"))))
+ '(whitespace-tab ((t (:background "black" :foreground "#222222")))))
