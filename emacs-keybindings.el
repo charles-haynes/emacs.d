@@ -4,6 +4,7 @@
 (global-set-key "\C-xm" 'compile)
 (global-set-key "\C-x\C-g" 'grep)
 (global-set-key [f4] 'revert-buffer)    ; F4
+(global-set-key "\C-a" 'smart-beginning-of-line)
 
 ;;; smex
 (global-set-key (kbd "M-x") 'smex)

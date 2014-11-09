@@ -4,6 +4,7 @@
 (setq custom-file (expand-file-name "~/.emacs.d/emacs-custom.el"))
 
 (require 'emacs-custom)
+(require 'emacs-functions)
 (require 'emacs-keybindings)
 
 (require

@@ -5,6 +5,7 @@
 (depends-on "better-defaults")
 (depends-on "bind-key")
 (depends-on "cask")
+(depends-on "CEDET")
 (depends-on "cl")
 (depends-on "dash")
 (depends-on "drag-stuff")
