@@ -2,6 +2,7 @@
 (source marmalade)
 (source melpa)
 
+(depends-on "better-defaults")
 (depends-on "bind-key")
 (depends-on "cask")
 (depends-on "cl")
@@ -14,6 +15,7 @@
 (depends-on "flycheck-cask")
 (depends-on "htmlize")
 (depends-on "idle-highlight-mode")
+(depends-on "ido-ubiquitous")
 (depends-on "magit")
 (depends-on "markdown-mode")
 (depends-on "markdown-mode+")
