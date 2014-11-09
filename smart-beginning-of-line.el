@@ -1,11 +1,5 @@
-;; global keybindings
-(global-set-key "\C-^" 'delete-indentation)
-(global-set-key "\C-xg" 'magit-status)
-(global-set-key "\C-xm" 'compile)
-(global-set-key "\C-x\C-g" 'grep)
-(global-set-key [f4] 'revert-buffer)    ; F4
-
 ;;; fancy go to beginning of line
+;;; autoload
 (defun smart-beginning-of-line ()
   "Move point to first non-whitespace character or beginning-of-line.
 
@@ -18,7 +12,3 @@ If point was already at that position, move point to beginning of line."
          (beginning-of-line))))
 
 (global-set-key "\C-a" 'smart-beginning-of-line)
-
-;;; (global-set-key "<left-margin><drag-mouse-1>" 'mouse-set-region)
-;;; (global-set-key "<left-margin><down-mouse-1>" 'mouse-set-region)
-
