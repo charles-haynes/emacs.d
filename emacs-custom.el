@@ -21,6 +21,7 @@
  '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(next-line-add-newlines t)
+ '(pallet-mode t)
  '(require-final-newline t)
  '(semantic-mode t)
  '(server-done-hook (quote ((lambda nil (delete-frame)))))
@@ -34,7 +35,8 @@
          (switch-to-buffer-other-frame server-buf))))))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
- '(track-eol t))
+ '(track-eol t)
+ '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
 
 (provide 'emacs-custom)
 (custom-set-faces

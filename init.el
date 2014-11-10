@@ -1,13 +1,14 @@
 ;;; package --- init
 ;;; Commentary:
 ;;; Code:
-(setq load-path
-      (cons (expand-file-name "~/.emacs.d/") load-path))
+
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/") t)
 
 (require 'cask "~/.emacs.d/.cask/24.4.1/elpa/cask-20141109.309/cask.el")
 (cask-initialize)
 
 (setq custom-file (expand-file-name "~/.emacs.d/emacs-custom.el"))
+;; (load custom-file 'noerror)
 
 (require 'emacs-custom)
 (require 'emacs-automode)
@@ -18,7 +19,9 @@
 (setq visible-bell nil
       ring-bell-function 'no-ding-filter)
 
-(put 'narrow-to-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+(put 'narrow-to-region 'disabled nil)
+(put 'set-goal-column 'disabled nil)
 (server-start)
 ;;; init ends here
