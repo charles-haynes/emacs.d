@@ -1,3 +1,7 @@
+;;; pacakge --- emacs-hooks
+;;; Commentary:
+;;; Code:
+
 ;;; web-beautify
 (eval-after-load 'js2-mode
   '(define-key js2-mode-map (kbd "C-c b") 'web-beautify-js))
@@ -7,3 +11,6 @@
   '(define-key html-mode-map (kbd "C-c b") 'web-beautify-html))
 (eval-after-load 'css-mode
   '(define-key css-mode-map (kbd "C-c b") 'web-beautify-css))
+
+(provide 'emacs-hooks)
+;;; emacs-hooks ends here

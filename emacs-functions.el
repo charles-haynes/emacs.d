@@ -15,9 +15,19 @@ If point was already at that position, move point to beginning of line."
          (beginning-of-line))))
 
 ;; UI tweaks
-(setq ring-bell-function `(lambda ()
-                            (set-face-background 'default "black")
-                            (set-face-background 'default "white")))
+(defun blink-mode-line ()
+   "Blinks the mode line, useful as a visible bell."
+   (invert-face 'mode-line)
+   (run-with-timer 0.1 nil 'invert-face 'mode-line))
+
+(defun no-ding-filter ()
+  "Do not call blink-mode-line if command in list."
+  (unless (memq this-command
+        ;; '(isearch-abort abort-recursive-edit exit-minibuffer
+        ;;       keyboard-quit mwheel-scroll down up next-line previous-line
+        ;;       backward-char forward-char))
+        '(mwheel-scroll))
+    (blink-mode-line)))
 
 (provide 'emacs-functions)
 

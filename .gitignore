@@ -3,3 +3,4 @@ places
 smex-items
 /ede-projects.el
 *.elc
+semanticdb/

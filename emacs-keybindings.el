@@ -1,12 +1,14 @@
 ;;; pacakge --- emacs-keybindings
 ;;; Commentary:
 ;;; Code:
+
 (global-set-key "\C-^" 'delete-indentation)
 (global-set-key "\C-xg" 'magit-status)
 (global-set-key "\C-xm" 'compile)
 (global-set-key "\C-x\C-g" 'grep)
 (global-set-key [f4] 'revert-buffer)    ; F4
 (global-set-key "\C-a" 'smart-beginning-of-line)
+(global-set-key (kbd "s-/") 'comment-or-uncomment-region)
 
 ;;; smex
 (global-set-key (kbd "M-x") 'smex)
@@ -18,7 +20,7 @@
 ;;; (global-set-key "<left-margin><down-mouse-1>" 'mouse-set-region)
 
 ;;; web-beautify
-(eval-after-load 'Js2-mode
+(eval-after-load 'js2-mode
   '(define-key js2-mode-map (kbd "C-c b") 'web-beautify-js))
 (eval-after-load 'json-mode
   '(define-key json-mode-map (kbd "C-c b") 'web-beautify-js))

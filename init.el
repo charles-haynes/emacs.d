@@ -10,8 +10,13 @@
 (setq custom-file (expand-file-name "~/.emacs.d/emacs-custom.el"))
 
 (require 'emacs-custom)
+(require 'emacs-automode)
 (require 'emacs-functions)
+(require 'emacs-hooks)
 (require 'emacs-keybindings)
+
+(setq visible-bell nil
+      ring-bell-function 'no-ding-filter)
 
 (put 'narrow-to-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
