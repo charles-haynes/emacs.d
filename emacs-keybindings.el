@@ -16,8 +16,10 @@
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-;;; (global-set-key "<left-margin><drag-mouse-1>" 'mouse-set-region)
-;;; (global-set-key "<left-margin><down-mouse-1>" 'mouse-set-region)
+(global-set-key (kbd "<left-fringe><drag-mouse-1>") 'mouse-set-region)
+(global-set-key (kbd "<left-fringe><down-mouse-1>") 'mouse-set-region)
+(global-set-key (kbd "<left-margin><drag-mouse-1>") 'mouse-set-region)
+(global-set-key (kbd "<left-margin><down-mouse-1>") 'mouse-set-region)
 
 ;;; web-beautify
 (eval-after-load 'js2-mode
