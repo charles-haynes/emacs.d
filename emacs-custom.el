@@ -1,3 +1,7 @@
+;;; emacs-custom.el --- separate "customize" file
+;;; Commentary:
+;;; Code:
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -5,6 +9,10 @@
  ;; If there is more than one, they won't work right.
  '(auto-insert-mode t)
  '(column-number-mode t)
+ '(custom-enabled-themes (quote (ceh-light)))
+ '(custom-safe-themes
+   (quote
+    ("9c807cd109b62f4eebb0b568151167a8d7352faee778960545c0a94682e6926b" default)))
  '(ediff-merge-split-window-function (quote split-window-vertically))
  '(ediff-split-window-function (quote split-window-horizontally))
  '(electric-pair-mode t)
@@ -36,7 +44,10 @@
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(track-eol t)
- '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
+ '(uniquify-buffer-name-style (quote forward) nil (uniquify))
+ '(whitespace-style
+   (quote
+    (face tabs spaces trailing lines-tail space-before-tab newline indentation empty space-after-tab space-mark tab-mark newline-mark))))
 
 (provide 'emacs-custom)
 (custom-set-faces
@@ -44,6 +55,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(whitespace-hspace ((t (:background "black" :foreground "brightblack"))))
- '(whitespace-newline ((t (:foreground "#222222" :weight normal))))
- '(whitespace-tab ((t (:background "black" :foreground "#222222")))))
+)
