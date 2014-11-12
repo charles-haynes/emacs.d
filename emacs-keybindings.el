@@ -21,11 +21,16 @@
 (global-set-key (kbd "<left-margin><drag-mouse-1>") 'mouse-set-region)
 (global-set-key (kbd "<left-margin><down-mouse-1>") 'mouse-set-region)
 
-;; multiple cursor
+;; expand-region
+(global-set-key (kbd "C-.") 'er/expand-region)
+(global-set-key (kbd "C-,") 'er/contract-region)
+
+;; multiple-cursor
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(global-set-key (kbd "<s-mouse-1>") 'mc/add-cursor-on-click)
 
 ;;; web-beautify
 (eval-after-load 'js2-mode
