@@ -1,4 +1,4 @@
-;;; emacs-custom.el --- separate "customize" file
+;;; emacs-custom --- separate "customize" file
 ;;; Commentary:
 ;;; Code:
 
@@ -12,10 +12,16 @@
  '(custom-enabled-themes (quote (ceh-light)))
  '(custom-safe-themes
    (quote
-    ("9c807cd109b62f4eebb0b568151167a8d7352faee778960545c0a94682e6926b" default)))
+    ("bf0d80e3ff1181d1d1e81beb7a6bebadf9c1502ae745a4b8807f0f9c4bb48846" default)))
  '(ediff-merge-split-window-function (quote split-window-vertically))
  '(ediff-split-window-function (quote split-window-horizontally))
  '(electric-pair-mode t)
+ '(face-font-family-alternatives
+   (quote
+    (("Monospace" "courier" "fixed")
+     ("Courier New" "courier" "Monospace" "CMU Typewriter Text" "fixed")
+     ("Open Sans" "Sans Serif" "helv" "helvetica" "arial" "fixed")
+     ("helv" "helvetica" "arial" "fixed"))))
  '(global-ede-mode t)
  '(global-flycheck-mode t nil (flycheck))
  '(global-linum-mode t)
@@ -23,7 +29,7 @@
  '(ido-use-virtual-buffers (quote auto))
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
- '(line-number-display-limit 10000)
+ '(line-number-display-limit 9999)
  '(line-number-mode t)
  '(magit-diff-refine-hunk (quote all))
  '(make-backup-files nil)
@@ -55,4 +61,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-)
+ )
+;;; emacs-custom ends here

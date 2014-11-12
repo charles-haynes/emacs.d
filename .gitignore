@@ -1,6 +1,7 @@
 .cask/
 places
 smex-items
-/ede-projects.el
+ede-projects.el
 *.elc
 semanticdb/
+.mc-lists.el
