@@ -9,6 +9,8 @@
  ;; If there is more than one, they won't work right.
  '(auto-insert-mode t)
  '(column-number-mode t)
+ '(compare-ignore-case t)
+ '(compare-ignore-whitespace t)
  '(custom-enabled-themes (quote (ceh-light)))
  '(custom-safe-themes
    (quote

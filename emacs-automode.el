@@ -16,6 +16,7 @@
 (auto-mode "\\.cs$" 'csharp-mode)
 (auto-mode "\\.css$" 'css-mode)
 (auto-mode "\\.gemspec$" 'ruby-mode)
+(auto-mode "\\.go$" 'go-mode)
 (auto-mode "\\.html?$" 'html-mode)
 (auto-mode "\\.js$" 'js2-mode)
 (auto-mode "\\.json$" 'json-mode)

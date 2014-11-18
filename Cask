@@ -18,6 +18,7 @@
 (depends-on "flycheck-cask")
 (depends-on "git-commit-mode")
 (depends-on "git-rebase-mode")
+(depends-on "go-mode")
 (depends-on "htmlize")
 (depends-on "idle-highlight-mode")
 (depends-on "ido-ubiquitous")
