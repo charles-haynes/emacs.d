@@ -15,6 +15,7 @@
  '(custom-safe-themes
    (quote
     ("bf0d80e3ff1181d1d1e81beb7a6bebadf9c1502ae745a4b8807f0f9c4bb48846" default)))
+ '(custom-theme-directory "~/.emacs.d/my-lisp")
  '(ediff-merge-split-window-function (quote split-window-vertically))
  '(ediff-split-window-function (quote split-window-horizontally))
  '(electric-pair-mode t)

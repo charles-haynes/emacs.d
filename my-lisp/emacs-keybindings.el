@@ -2,12 +2,13 @@
 ;;; Commentary:
 ;;; Code:
 
-(global-set-key "\C-^" 'delete-indentation)
-(global-set-key "\C-xg" 'magit-status)
-(global-set-key "\C-xm" 'compile)
-(global-set-key "\C-x\C-g" 'grep)
-(global-set-key [f4] 'revert-buffer)    ; F4
-(global-set-key "\C-a" 'smart-beginning-of-line)
+(global-set-key (kbd "C-^") 'delete-indentation)
+(global-set-key (kbd "C-/") 'delete-trailing-whitespace)
+(global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x m") 'compile)
+(global-set-key (kbd "C-x C-g") 'grep)
+(global-set-key (kbd "<f4>") 'revert-buffer)
+(global-set-key (kbd "C-a") 'smart-beginning-of-line)
 (global-set-key (kbd "s-/") 'comment-or-uncomment-region)
 
 ;;; smex

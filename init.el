@@ -2,12 +2,12 @@
 ;;; Commentary:
 ;;; Code:
 
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/") t)
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/my-lisp") t)
 
 (require 'cask "~/.emacs.d/.cask/24.4.1/elpa/cask-20141109.309/cask.el")
 (cask-initialize)
 
-(setq custom-file (expand-file-name "~/.emacs.d/emacs-custom.el"))
+(setq custom-file (expand-file-name "~/.emacs.d/my-lisp/emacs-custom.el"))
 ;; (load custom-file 'noerror)
 
 ;;;;;;;;;;;;;;;;;;;;;;
