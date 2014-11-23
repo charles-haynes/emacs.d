@@ -29,6 +29,9 @@ If point was already at that position, move point to beginning of line."
         '(mwheel-scroll))
     (blink-mode-line)))
 
+(setq visible-bell nil ring-bell-function 'no-ding-filter)
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 (provide 'emacs-functions)
 
 ;;; emacs-functions ends here

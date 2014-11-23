@@ -41,6 +41,7 @@
 (depends-on "shut-up")
 (depends-on "smartparens")
 (depends-on "smex")
+(depends-on "smooth-scrolling")
 (depends-on "use-package")
 (depends-on "web-beautify")
 (depends-on "web-mode")

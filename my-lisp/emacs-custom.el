@@ -8,6 +8,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(auto-insert-mode t)
+ '(backup-directory-alist (quote (("." . "~/.emacs.d/backups"))))
  '(column-number-mode t)
  '(compare-ignore-case t)
  '(compare-ignore-whitespace t)
@@ -16,6 +17,9 @@
    (quote
     ("bf0d80e3ff1181d1d1e81beb7a6bebadf9c1502ae745a4b8807f0f9c4bb48846" default)))
  '(custom-theme-directory "~/.emacs.d/my-lisp")
+ '(display-time-day-and-date t)
+ '(display-time-default-load-average nil)
+ '(display-time-mode t)
  '(ediff-merge-split-window-function (quote split-window-vertically))
  '(ediff-split-window-function (quote split-window-horizontally))
  '(electric-pair-mode t)
@@ -40,6 +44,7 @@
  '(next-line-add-newlines t)
  '(pallet-mode t)
  '(require-final-newline t)
+ '(revert-without-query (quote (".")))
  '(semantic-mode t)
  '(server-done-hook (quote ((lambda nil (delete-frame)))))
  '(server-switch-hook
@@ -51,6 +56,7 @@
          (bury-buffer)
          (switch-to-buffer-other-frame server-buf))))))
  '(show-paren-mode t)
+ '(smooth-scroll-margin 3)
  '(tool-bar-mode nil)
  '(track-eol t)
  '(uniquify-buffer-name-style (quote forward) nil (uniquify))

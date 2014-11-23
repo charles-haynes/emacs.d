@@ -2,13 +2,12 @@
 ;;; Commentary:
 ;;; Code:
 
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/my-lisp") t)
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/my-lisp"))
 
 (require 'cask "~/.emacs.d/.cask/24.4.1/elpa/cask-20141109.309/cask.el")
 (cask-initialize)
 
 (setq custom-file (expand-file-name "~/.emacs.d/my-lisp/emacs-custom.el"))
-;; (load custom-file 'noerror)
 
 ;;;;;;;;;;;;;;;;;;;;;;
 ;;;
@@ -27,8 +26,6 @@
 (require 'emacs-functions)
 (require 'emacs-hooks)
 (require 'emacs-keybindings)
-
-(setq visible-bell nil ring-bell-function 'no-ding-filter)
 
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
