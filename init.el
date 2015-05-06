@@ -4,7 +4,11 @@
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/my-lisp"))
 
-(require 'cask "~/.emacs.d/.cask/24.4.1/elpa/cask-20141109.309/cask.el")
+;; in a new installation do
+; brew install cask
+; cask install
+
+(require 'cask "/usr/local/Cellar/cask/0.7.2/cask.el")
 (cask-initialize)
 
 (setq custom-file (expand-file-name "~/.emacs.d/my-lisp/emacs-custom.el"))
