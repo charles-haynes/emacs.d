@@ -15,6 +15,10 @@
 
 (setq custom-file (expand-file-name "~/.emacs.d/my-lisp/emacs-custom.el"))
 
+;;; set $MANPATH, $PATH and exec-path from your shell, but only on OS X
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
 ;;;;;;;;;;;;;;;;;;;;;;
 ;;;
 ;;;  TODO
