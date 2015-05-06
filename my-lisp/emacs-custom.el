@@ -15,7 +15,7 @@
  '(custom-enabled-themes (quote (ceh-light)))
  '(custom-safe-themes
    (quote
-    ("bf0d80e3ff1181d1d1e81beb7a6bebadf9c1502ae745a4b8807f0f9c4bb48846" default)))
+    ("3dd327d67b43f64d25eb1c1a0e37534de82dec57ab0a8beb8cfc67f83eb12f04" "bf0d80e3ff1181d1d1e81beb7a6bebadf9c1502ae745a4b8807f0f9c4bb48846" default)))
  '(custom-theme-directory "~/.emacs.d/my-lisp")
  '(display-time-day-and-date t)
  '(display-time-default-load-average nil)

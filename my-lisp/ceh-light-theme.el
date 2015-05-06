@@ -29,7 +29,7 @@
  '(whitespace-hspace ((t (:background "black" :foreground "brightblack"))))
  '(whitespace-line ((t (:underline (:color "Brown" :style wave)))))
  '(whitespace-newline ((t (:background "LightYellow" :foreground "lightgray" :weight normal))))
- '(whitespace-tab ((t (:background "black" :foreground "#222222"))))
+ '(whitespace-tab ((t (:background "White" :foreground "#222222"))))
  '(whitespace-trailing ((t (:background "#ffdddd" :foreground "LightYellow" :box (:line-width 1 :color "#880000")))))
  '(window-divider-first-pixel ((t (:foreground "gray60"))))
  '(window-divider-last-pixel ((t (:foreground "gray60")))))
