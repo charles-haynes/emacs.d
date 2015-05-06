@@ -5,3 +5,7 @@ ede-projects.el
 *.elc
 semanticdb/
 .mc-lists.el
+ido.last
+auto-save-list/*
+backups/*
+elpa/*
