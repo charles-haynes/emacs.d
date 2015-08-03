@@ -6,6 +6,7 @@
 (depends-on "bind-key")
 (depends-on "cask")
 (depends-on "coffee-mode")
+(depends-on "color-theme")
 (depends-on "csharp-mode")
 (depends-on "dash")
 (depends-on "diminish")
