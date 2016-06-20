@@ -47,5 +47,9 @@
 (eval-after-load 'css-mode
   '(define-key css-mode-map (kbd "C-c b") 'web-beautify-css))
 
+;;; default-text-scale
+(global-set-key (kbd "s-+") 'default-text-scale-increase)
+(global-set-key (kbd "s--") 'default-text-scale-decrease)
+
 (provide 'emacs-keybindings)
 ;;; emacs-keybindings ends here
