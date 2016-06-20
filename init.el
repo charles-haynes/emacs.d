@@ -8,7 +8,7 @@
 ; brew install cask
 ; cask install
 
-(require 'cask "/usr/local/Cellar/cask/0.7.2/cask.el")
+(require 'cask "~/.emacs.d/.cask/cask.el")
 (cask-initialize)
 (require 'pallet)
 (pallet-mode t)
@@ -17,7 +17,12 @@
 
 ;;; set $MANPATH, $PATH and exec-path from your shell, but only on OS X
 (when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
+  (progn
+    (exec-path-from-shell-initialize)
+    ; add homebrew dirs to path
+    (let ((default-directory "/usr/local/share/emacs/site-lisp/"))
+      (normal-top-level-add-subdirs-to-load-path))
+    ))
 
 ;;;;;;;;;;;;;;;;;;;;;;
 ;;;
@@ -36,10 +41,5 @@
 (require 'emacs-functions)
 (require 'emacs-hooks)
 (require 'emacs-keybindings)
-
-(put 'upcase-region 'disabled nil)
-(put 'downcase-region 'disabled nil)
-(put 'narrow-to-region 'disabled nil)
-(put 'set-goal-column 'disabled nil)
 
 ;;; init ends here
