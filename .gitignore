@@ -11,3 +11,4 @@ backups/*
 elpa/*
 yasnippet-go/
 recentf/
+\#*
