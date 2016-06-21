@@ -19,6 +19,7 @@
 (auto-mode "\\.go$" 'go-mode)
 (auto-mode "\\.html?$" 'html-mode)
 (auto-mode "\\.js$" 'js2-mode)
+(auto-mode "\\.jsx$" 'web-mode)
 (auto-mode "\\.json$" 'json-mode)
 (auto-mode "\\.markdown$" 'markdown-mode)
 (auto-mode "\\.md$" 'markdown-mode)
@@ -41,6 +42,8 @@
 (add-to-list 'magic-mode-alist '("<＼＼?xml " . nxml-mode))
 
 (fset 'xml-mode 'nxml-mode)
+
+; (flycheck-add-mode 'javascript-eslint 'web-mode)
 
 (provide 'emacs-automode)
 

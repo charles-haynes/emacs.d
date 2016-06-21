@@ -2,6 +2,11 @@
 ;;; Commentary:
 ;;; Code:
 
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
+(put 'set-goal-column 'disabled nil)
+(put 'narrow-to-region 'disabled nil)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -29,13 +34,16 @@
      ("Courier New" "courier" "Monospace" "CMU Typewriter Text" "fixed")
      ("Open Sans" "Sans Serif" "helv" "helvetica" "arial" "fixed")
      ("helv" "helvetica" "arial" "fixed"))))
+ '(flycheck-disabled-checkers (quote (javascript-jshint)))
  '(global-ede-mode t)
  '(global-flycheck-mode t nil (flycheck))
  '(global-linum-mode t)
  '(global-whitespace-mode t)
  '(ido-use-virtual-buffers (quote auto))
+ '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
+ '(js2-basic-offset 2)
  '(line-number-display-limit 9999)
  '(line-number-mode t)
  '(magit-diff-refine-hunk (quote all))
@@ -46,6 +54,7 @@
  '(require-final-newline t)
  '(revert-without-query (quote (".")))
  '(semantic-mode t)
+ '(semantic-stickyfunc-indent-string "")
  '(server-done-hook (quote ((lambda nil (delete-frame)))))
  '(server-switch-hook
    (quote
@@ -60,6 +69,10 @@
  '(tool-bar-mode nil)
  '(track-eol t)
  '(uniquify-buffer-name-style (quote forward) nil (uniquify))
+ '(vc-handled-backends nil)
+ '(web-mode-code-indent-offset 2)
+ '(web-mode-css-indent-offset 2)
+ '(web-mode-markup-indent-offset 2)
  '(whitespace-style
    (quote
     (face tabs spaces trailing lines-tail space-before-tab newline indentation empty space-after-tab space-mark tab-mark newline-mark))))
