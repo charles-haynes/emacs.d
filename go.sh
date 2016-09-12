@@ -1,5 +1,8 @@
 #! /usr/bin/env /bin/bash
 
+set -e
+set -x
+
 git clone https://github.com/dominikh/yasnippet-go yasnippet-go \
     || (cd yasnippet-go && git pull --rebase)
 
@@ -10,4 +13,3 @@ else
     git clone https://github.com/cask/cask.git .cask
     .cask/bin/cask install --verbose
 fi
-
