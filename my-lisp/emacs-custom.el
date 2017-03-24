@@ -43,6 +43,7 @@
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
+ '(js-indent-level 2)
  '(js2-basic-offset 2)
  '(line-number-display-limit 9999)
  '(line-number-mode t)
