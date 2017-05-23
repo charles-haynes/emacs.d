@@ -46,6 +46,7 @@
 
 (fset 'xml-mode 'nxml-mode)
 
+(declare-function flycheck-add-mode "flycheck.el")
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 
 (provide 'emacs-automode)
