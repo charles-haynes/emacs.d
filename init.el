@@ -97,7 +97,10 @@
     (local-set-key (kbd "M-.") 'godef-jump)
     (local-set-key (kbd "M-*") 'pop-tag-mark)
                                         ; autocomplete
-    (auto-complete-mode 1))
+    ; (ac-config-default)
+    (auto-complete-mode 1)
+                                        ; eldoc (show type info at point)
+    (go-eldoc-setup))
   (add-hook 'go-mode-hook 'my-go-mode-hook))
 (use-package htmlize)
 (use-package idle-highlight-mode)
