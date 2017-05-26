@@ -78,15 +78,15 @@
   :config
   (require 'auto-complete-config)
   (ac-config-default))
-(use-package go-eldoc)
-(use-package go-guru)
-(use-package godoctor)
 (use-package go-mode
   :mode "\\.go\\'"
   :config
   ;; (use-package flycheck-gometalinter
   ;;   :config
   ;;   (flycheck-gometalinter-setup))
+  (use-package go-eldoc)
+  (use-package go-guru)
+  (use-package godoctor)
   (defun my-go-mode-hook ()
     "Various tweaks to make go-mode nicer."
                                         ; make go compile do a go install
