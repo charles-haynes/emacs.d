@@ -4,24 +4,37 @@
 
 
 (require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
-(when (< emacs-major-version 24)
-  ;; For important compatibility libraries like cl-lib
-  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(setq package-archives
+ '(("melpa-stable" . "http://stable.melpa.org/packages/")
+   ("melpa" . "http://melpa.org/packages/")
+   ("marmalade"   . "http://marmalade-repo.org/packages/")
+   ("org"         . "http://orgmode.org/elpa/")
+   ("gnu"         . "http://elpa.gnu.org/packages/")))
 
-                                        ; Added by Package.el.  This must come before configurations of
+;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(require 'use-package)
+;; https://github.com/jwiegley/use-package/issues/219
+;; Bootstrap `use-package'
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+;; Use use-package now
+
+;; https://github.com/jwiegley/use-package#use-packageel-is-no-longer-needed-at-runtime
+(eval-when-compile
+  (require 'use-package))
+(require 'diminish)
+(require 'bind-key)
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/my-lisp"))
 
 ;; in a new installation do
-                                        ; bash -x go.sh
+;; bash -x go.sh
 
 (setq use-package-always-ensure t)
 (use-package auto-complete)
