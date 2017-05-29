@@ -114,8 +114,7 @@
     ;; eldoc (show type info at point)
     (go-eldoc-setup))
   (add-hook 'go-mode-hook 'my-go-mode-hook))
-(use-package htmlize)
-(use-package idle-highlight-mode)
+(use-package idle-highlight-mode) ;; highlights word under dot after idle - caused emacs to hang?
 (use-package json-mode
   :mode "\\.json\\'"
   :bind (:map json-mode-map ("C-c b" . web-beautify-js)))
@@ -144,7 +143,6 @@
          ("\\.xsd\\'" . nxml-mode))
   :config
   (add-to-list 'magic-mode-alist '("<＼＼?xml " . nxml-mode)))
-(use-package nyan-mode)
 (use-package org
   :mode "\\.org\\'")
 (use-package popwin)
@@ -168,7 +166,6 @@
          "\\.rb\\'"
          "\\.spec\\'")
   :interpreter "ruby")
-(use-package s)
 (use-package sgml-mode
   :bind (:map html-mode-map ("C-c b" . web-beautify-html))
   :mode ("\\.html\\'" . html-mode))
