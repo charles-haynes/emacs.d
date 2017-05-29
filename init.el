@@ -38,7 +38,6 @@
 
 (setq use-package-always-ensure t)
 (use-package auto-complete)
-(use-package bind-key)
 (use-package cc-mode
   :mode (
          "\\.cpp\\'"
@@ -57,9 +56,7 @@
          "\\.css\\'"
          "\\.sass\\'"
          "\\.scss\\'"))
-(use-package dash)
 (use-package default-text-scale)
-(use-package drag-stuff)
 (use-package exec-path-from-shell
   :if (memq window-system '(mac ns))
   :ensure t
@@ -70,7 +67,6 @@
          ("C-," . er/contract-region)
          ("<C-S-right>" . er/expand-region)
          ("<C-S-left>" . er/contract-region)))
-(use-package f)
 (use-package flycheck
   :config
   (defun my/use-eslint-from-node-modules ()
@@ -102,17 +98,17 @@
   (use-package godoctor)
   (defun my-go-mode-hook ()
     "Various tweaks to make go-mode nicer."
-                                        ; make go compile do a go install
+    ;; make go compile do a go install
     (lambda () (set (make-local-variable 'compile-command) "go install -x -v"))
-                                        ; Call Gofmt before saving
+    ;; Call Gofmt before saving
     (add-hook 'before-save-hook 'gofmt-before-save)
-                                        ; Godef jump key binding
+    ;; Godef jump key binding
     (local-set-key (kbd "M-.") 'godef-jump)
     (local-set-key (kbd "M-*") 'pop-tag-mark)
-                                        ; autocomplete
-    ; (ac-config-default)
+    ;; autocomplete
+    ;; (ac-config-default)
     (auto-complete-mode 1)
-                                        ; eldoc (show type info at point)
+    ;; eldoc (show type info at point)
     (go-eldoc-setup))
   (add-hook 'go-mode-hook 'my-go-mode-hook))
 (use-package htmlize)
@@ -149,7 +145,6 @@
 (use-package org
   :mode "\\.org\\'")
 (use-package popwin)
-(use-package prodigy)
 (use-package projectile)
 (use-package python
   :interpreter ("python" . python-mode)
