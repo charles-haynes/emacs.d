@@ -69,6 +69,7 @@
          ("<C-S-left>" . er/contract-region)))
 (use-package flycheck
   :config
+  (use-package flycheck-pos-tip) ;; tooltip at pos
   (defun my/use-eslint-from-node-modules ()
     "Look for eslint in current dir and all parents."
     (let* ((root (locate-dominating-file
@@ -81,8 +82,10 @@
         (setq-local flycheck-javascript-eslint-executable eslint))))
 
   (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
-  (flycheck-add-mode 'javascript-eslint 'web-mode))
-(use-package flycheck-pos-tip) ;; tooltip at pos
+  (flycheck-add-mode 'javascript-eslint 'web-mode)
+  (flycheck-pos-tip-mode)
+  )
+
 (use-package go-autocomplete
   :config
   (require 'auto-complete-config)
