@@ -59,6 +59,15 @@
 ;; bash -x go.sh
 
 (setq use-package-always-ensure t)
+(use-package ag)
+(use-package ansi-color
+  :config
+  (defun display-ansi-colors ()
+    "Convert ansi escape sequences to colors."
+    (interactive)
+    (let ((inhibit-read-only t))
+      (ansi-color-apply-on-region (point-min) (point-max))))
+  (add-hook 'compilation-filter-hook 'display-ansi-colors))
 (use-package auto-complete)
 (use-package cc-mode
   :ensure nil
@@ -79,7 +88,7 @@
   :mode (
          "\\.cs\\'"))
 (use-package css-mode
-  :bind (:map css-mode-map ("C-c b" . web-beautify-css))
+  ;; :bind (:map css-mode-map ("C-c b" . web-beautify-css))
   :mode (
          "\\.css\\'"
          "\\.sass\\'"
@@ -141,10 +150,27 @@
     ;; eldoc (show type info at point)
     (go-eldoc-setup))
   (add-hook 'go-mode-hook 'my-go-mode-hook))
+;; (use-package emacs-async) ;; helm depends on it
+;; (use-package popup-el) ;; helm depends on it
+(use-package helm
+  :config (progn
+            (use-package helm-ag)
+            (use-package helm-projectile
+              :config
+              (use-package helm-projectile-ag)
+              ; (helm-projectile-on)
+              :bind( "C-c h" . helm-projectile)))
+  :bind (("M-x" . helm-M-x)
+         ("C-x C-f" . helm-find-files)
+         ("C-x f" . helm-recentf)
+         ("M-y" . helm-show-kill-ring)
+         ("C-x b" . helm-buffers-list)
+         ("C-h i". helm-google-suggest)
+         ("C-h a" . helm-apropos)))
 ;; (use-package idle-highlight-mode) ;; highlights word under dot after idle - caused emacs to hang?
-(use-package json-mode
-  :mode "\\.json\\'"
-  :bind (:map json-mode-map ("C-c b" . web-beautify-js)))
+;; (use-package json-mode ;; using prettier-js instead
+;;   :mode "\\.json\\'"
+;;   :bind (:map json-mode-map ("C-c b" . web-beautify-js)))
 (use-package magit
   :bind ("C-x g" . magit-status))
 (use-package markdown-mode
@@ -158,9 +184,11 @@
 (use-package multiple-cursors
   :bind (("C-S-c C-S-c" . mc/edit-lines)
          ("C->" . mc/mark-next-like-this)
-         ("C-<" . mc/mark-previous-like-this)
          ("<C-S-down>" . mc/mark-next-like-this)
+         ("C-<" . mc/mark-previous-like-this)
          ("<C-S-up>" . mc/mark-previous-like-this)
+         ("C-M->" . mc/mark-next-symbol-like-this)
+         ("C-M-<" . mc/mark-previous-symbol-like-this)
          ("C-c C-<" . mc/mark-all-like-this)
          ("<s-mouse-1>" . mc/add-cursor-on-click)))
 (use-package nxml
@@ -173,7 +201,11 @@
 (use-package org
   :mode "\\.org\\'")
 (use-package popwin)
-(use-package projectile)
+(use-package prettier-js
+  :config
+  (setq prettier-js-args '("--trailing-comma" "es5" "--single-quote" "true")))
+(use-package projectile
+  :config    (projectile-mode t))
 (use-package python
   :interpreter ("python" . python-mode)
   :mode ("\\.py" . python-mode))
@@ -181,7 +213,9 @@
   :mode (
          "\\.js\\'"
          "\\.jsx\\'")
-  :bind (:map rjsx-mode-map ("C-c b" . web-beautify-js)))
+  ;; :bind (:map rjsx-mode-map ("C-c b" . web-beautify-js)))
+  :config
+  (add-hook 'rjsx-mode-hook 'prettier-js-mode))
 (use-package ruby-mode
   :mode (
          "Gemfile\\'"
@@ -210,10 +244,11 @@
          ("\\.sh\\'" . sh-mode)
          ("\\.zsh\\'" . sh-mode)))
 (use-package smartparens)
-(use-package smex
-  :bind (("M-x" . smex)
-         ("M-X" . smex-major-mode-commands)
-         ("C-c C-c M-x" . execute-extended-command))) ;; old M-x .
+;; using helm instead of smex
+;; (use-package smex
+;;   :bind (("M-x" . smex)
+;;          ("M-X" . smex-major-mode-commands)
+;;          ("C-c C-c M-x" . execute-extended-command))) ;; old M-x .
 (use-package sql
   :mode ("\\.sql\\'" . sql-mode))
 (use-package uuidgen)
@@ -223,25 +258,13 @@
   :mode ("\\.yaml\\'" "\\.yml\\'"))
 (use-package yasnippet)
 
-(setq custom-file (expand-file-name "~/.emacs.d/my-lisp/emacs-custom.el"))
-
 ;;; set $MANPATH, $PATH and exec-path from your shell, but only on OS X
 (when (memq window-system '(mac ns))
   (progn
-                                        ; add homebrew dirs to path
+    ;; add homebrew dirs to path
     (let ((default-directory "/usr/local/share/emacs/site-lisp/"))
       (normal-top-level-add-subdirs-to-load-path))
     ))
-
-;;;;;;;;;;;;;;;;;;;;;;
-;;;
-;;;  TODO
-;;;
-;;;;;;;;;;;;;;;;;;;;;;
-
-                                        ; flycheck python mode
-                                        ; autocomplete? (hippie mode already? not needed?)
-                                        ; icicle
 
 ;;;;;;;;;;;;;;;;;;;;;;
 

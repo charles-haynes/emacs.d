@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
+(setq custom-file load-file-name)
+
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 (put 'set-goal-column 'disabled nil)
@@ -58,10 +60,21 @@
  '(next-line-add-newlines t)
  '(package-selected-packages
    (quote
-    (godoctor go-guru go-eldoc yasnippet yaml-mode web-mode web-beautify uuidgen use-package smex smartparens s rjsx-mode projectile popwin nyan-mode multiple-cursors markdown-mode+ magit json-mode idle-highlight-mode htmlize go-mode go-autocomplete flycheck-pos-tip expand-region exec-path-from-shell default-text-scale csharp-mode color-theme coffee-mode)))
+    (helm godoctor go-guru go-eldoc yasnippet yaml-mode web-mode web-beautify uuidgen use-package smex smartparens s rjsx-mode projectile popwin nyan-mode multiple-cursors markdown-mode+ magit json-mode idle-highlight-mode htmlize go-mode go-autocomplete flycheck-pos-tip expand-region exec-path-from-shell default-text-scale csharp-mode color-theme coffee-mode)))
  '(pallet-mode t)
  '(require-final-newline t)
  '(revert-without-query (quote (".")))
+ '(safe-local-variable-values
+   (quote
+    ((eval setq flycheck-clang-include-path
+           (list
+            (expand-file-name "~/projects/personal/Arduino/libraries/FastLED-3.1.3")
+            (expand-file-name "~/projects/personal/Arduino/libraries/Time")
+            (expand-file-name "~/projects/personal/Arduino/libraries/TimeAlarms")
+            (expand-file-name "~/Library/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/tools/sdk/include")
+            (expand-file-name "~/Library/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/tools/sdk/lwip/include")
+            (expand-file-name "~/Library/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/cores/esp8266")
+            (expand-file-name "~/Library/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/variants/nodemcu"))))))
  '(semantic-mode t)
  '(semantic-stickyfunc-indent-string "")
  '(server-done-hook (quote ((lambda nil (delete-frame)))))
