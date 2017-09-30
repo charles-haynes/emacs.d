@@ -11,3 +11,8 @@ elpa/*
 yasnippet-go/
 recentf/
 \#*
+projectile-bookmarks.eld
+recentf
+url/
+ac-comphist.dat
+eshell/history
