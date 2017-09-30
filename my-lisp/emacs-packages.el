@@ -203,7 +203,7 @@
 (use-package popwin)
 (use-package prettier-js
   :config
-  (setq prettier-js-args '("--trailing-comma" "es5" "--single-quote" "true")))
+  (setq prettier-js-args '("--trailing-comma" "all" "--single-quote" "true")))
 (use-package projectile
   :config    (projectile-mode t))
 (use-package python
@@ -214,8 +214,9 @@
          "\\.js\\'"
          "\\.jsx\\'")
   ;; :bind (:map rjsx-mode-map ("C-c b" . web-beautify-js)))
-  :config
-  (add-hook 'rjsx-mode-hook 'prettier-js-mode))
+  ;; :config
+  ;; (add-hook 'rjsx-mode-hook 'prettier-js-mode)
+  )
 (use-package ruby-mode
   :mode (
          "Gemfile\\'"
