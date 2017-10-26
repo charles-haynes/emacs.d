@@ -31,9 +31,10 @@
 ;;    ("marmalade"   . "http://marmalade-repo.org/packages/")
 ;;    ("org"         . "http://orgmode.org/elpa/")
 ;;    ("gnu"         . "http://elpa.gnu.org/packages/")))
-(setq package-archives
-      '(("melpa" . "http://melpa.org/packages/")
-        ("gnu"         . "http://elpa.gnu.org/packages/")))
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
+(add-to-list 'package-archives
+             '("org"         . "http://orgmode.org/elpa/") t)
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
