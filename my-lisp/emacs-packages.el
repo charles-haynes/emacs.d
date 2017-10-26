@@ -203,6 +203,7 @@
   :config
   (add-to-list 'magic-mode-alist '("<＼＼?xml " . nxml-mode)))
 (use-package org
+  :defer t
   :mode "\\.org\\'")
 (use-package popwin)
 (use-package prettier-js
