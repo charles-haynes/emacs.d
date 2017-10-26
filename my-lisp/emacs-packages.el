@@ -55,6 +55,7 @@
   (require 'use-package))
 (require 'diminish)
 (require 'bind-key)
+(setq use-package-verbose t)
 
 ;; in a new installation do
 ;; bash -x go.sh
