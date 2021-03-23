@@ -81,7 +81,6 @@
          ("\\.h\\'" . c++-mode)
          ("\\.ino\\'" . c++-mode)
          ("\\.java\\'" . java-mode)))
-(use-package color-theme)
 (use-package coffee-mode
   :mode (
          "Cakefile\\'"

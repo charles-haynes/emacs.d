@@ -60,7 +60,7 @@
  '(next-line-add-newlines t)
  '(package-selected-packages
    (quote
-    (helm godoctor go-guru go-eldoc yasnippet yaml-mode web-mode web-beautify uuidgen use-package smex smartparens s rjsx-mode projectile popwin nyan-mode multiple-cursors markdown-mode+ magit json-mode idle-highlight-mode htmlize go-mode go-autocomplete flycheck-pos-tip expand-region exec-path-from-shell default-text-scale csharp-mode color-theme coffee-mode)))
+    (helm godoctor go-guru go-eldoc yasnippet yaml-mode web-mode web-beautify uuidgen use-package smex smartparens s rjsx-mode projectile popwin nyan-mode multiple-cursors markdown-mode+ magit json-mode idle-highlight-mode htmlize go-mode go-autocomplete flycheck-pos-tip expand-region exec-path-from-shell default-text-scale csharp-mode coffee-mode)))
  '(pallet-mode t)
  '(require-final-newline t)
  '(revert-without-query (quote (".")))
