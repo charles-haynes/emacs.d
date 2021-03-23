@@ -133,9 +133,6 @@
 (use-package go-mode
   :mode "\\.go\\'"
   :config
-  ;; (use-package flycheck-gometalinter
-  ;;   :config
-  ;;   (flycheck-gometalinter-setup))
   (use-package go-eldoc)
   (use-package go-guru)
   (use-package godoctor)
@@ -202,9 +199,22 @@
          ("\\.xsd\\'" . nxml-mode))
   :config
   (add-to-list 'magic-mode-alist '("<＼＼?xml " . nxml-mode)))
+;; (use-package org
+;;   :defer t
+;;   :mode "\\.org\\'")
+;; the following is from https://github.com/jwiegley/use-package/issues/135
 (use-package org
-  :defer t
-  :mode "\\.org\\'")
+  :ensure org-plus-contrib
+  :commands (org
+             org-capture
+             org-mode
+             org-store-link
+             update-org-hours
+             my-term-agenda
+             dired-notes
+             jump-to-org-agenda)
+  :mode (("\\.org_archive\\'" . org-mode)
+         ("\\.org\\'" . org-mode)))
 (use-package popwin)
 (use-package prettier-js
   :config
